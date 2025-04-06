@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mautic
+    env: docker
+    plan: free
+    branch: main
+    repo: ton-utilisateur/ton-repo
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: MAUTIC_DB_HOST
+        value: your-db-host.render.com
+      - key: MAUTIC_DB_NAME
+        value: mautic
+      - key: MAUTIC_DB_USER
+        value: root
+      - key: MAUTIC_DB_PASSWORD
+        value: your-password
+      - key: MAUTIC_ENV
+        value: dev
